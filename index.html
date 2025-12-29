@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Haris Ahmad – Certified Health & Safety Professional with NEBOSH IGC, IOSH, and OSHA 30-hour certifications.">
+    <meta name="keywords" content="Health and Safety Officer, NEBOSH IGC, IOSH, OSHA, Safety Professional Pakistan">
+    <meta name="author" content="Haris Ahmad">
+
+    <!-- Open Graph (LinkedIn / WhatsApp Preview) -->
+    <meta property="og:title" content="Haris Ahmad | Health & Safety Professional">
+    <meta property="og:description" content="Certified Health & Safety Professional with international credentials.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR-SITE.netlify.app">
+
+    <title>Haris Ahmad | Health & Safety Professional</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Config for Tailwind to match specific colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    colors: {
+                        safety: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d', // Primary Brand Color
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        slate: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for things Tailwind handles awkwardly */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Diagonal background pattern */
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* Floating Animation for Background Icons */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 8s ease-in-out infinite 2s; }
+        .animate-float-slow { animation: float 10s ease-in-out infinite 1s; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-safety-100 selection:text-safety-900">
+
+    <!-- ================= NAV ================= -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold tracking-tight text-slate-900 group"> Haris Ahmad
+            </a>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 font-medium text-sm text-slate-600">
+                <li><a href="#home" class="hover:text-safety-700 transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-safety-700 transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-safety-700 transition-colors">Skills</a></li>
+                <li><a href="#education" class="hover:text-safety-700 transition-colors">Education</a></li>
+                <li><a href="#certifications" class="hover:text-safety-700 transition-colors">Certifications</a></li>
+                <li><a href="#experience" class="hover:text-safety-700 transition-colors">Experience</a></li>
+                <li><a href="#contact" class="px-4 py-2 bg-safety-700 text-white rounded-lg hover:bg-safety-800 transition-colors shadow-sm">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <ul class="flex flex-col p-6 space-y-4 font-medium text-slate-600">
+                <li><a href="#home" class="block hover:text-safety-700">Home</a></li>
+                <li><a href="#about" class="block hover:text-safety-700">About</a></li>
+                <li><a href="#skills" class="block hover:text-safety-700">Skills</a></li>
+                <li><a href="#education" class="block hover:text-safety-700">Education</a></li>
+                <li><a href="#certifications" class="block hover:text-safety-700">Certifications</a></li>
+                <li><a href="#experience" class="block hover:text-safety-700">Experience</a></li>
+                <li><a href="#contact" class="block text-safety-700 font-bold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-pattern">
+
+                <!-- Floating Icons: Safety & PPE -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[15%] left-[5%] text-7xl md:text-9xl opacity-60 animate-float">⛑️</div>
+            <div class="absolute bottom-[20%] right-[5%] text-6xl md:text-8xl opacity-60 animate-float-delayed">🧯</div>
+            <div class="absolute top-[20%] right-[15%] text-5xl md:text-7xl opacity-60 animate-float-slow">🩺</div>
+            <div class="absolute bottom-[10%] left-[20%] text-6xl md:text-8xl opacity-60 animate-float">🦺</div>
+            <div class="absolute top-[40%] left-[10%] text-5xl md:text-7xl opacity-60 animate-float-delayed">🥽</div>
+            <div class="absolute top-[60%] right-[10%] text-6xl md:text-8xl opacity-60 animate-float-slow">🚧</div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-safety-800 uppercase bg-safety-100 rounded-full">
+                    Occupational Health & Safety
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                    Haris Ahmad
+                </h1>
+                <div class="text-xl md:text-2xl text-slate-600 font-mono h-8 mb-8">
+                    I am a <span id="typing-text" class="text-safety-700 font-bold typing-cursor"></span>
+                </div>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Dedicated to creating safer workplaces through rigorous risk assessment, compliance management, and proactive safety culture implementation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="px-8 py-3 bg-safety-700 text-white font-semibold rounded-lg hover:bg-safety-800 transition-transform hover:-translate-y-1 shadow-lg shadow-safety-200">
+                        Get in Touch
+                    </a>
+                    <a href="#certifications" class="px-8 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg hover:bg-slate-50 transition-colors">
+                        View Credentials
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background decorative blob -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-safety-50 rounded-full blur-3xl -z-10 opacity-60"></div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+
+        <!-- Floating Icons: Protection & Identity -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[10%] left-[2%] text-6xl opacity-50 animate-float-slow">🛡️</div>
+            <div class="absolute bottom-[15%] right-[2%] text-7xl opacity-50 animate-float">👷</div>
+            <div class="absolute top-[40%] right-[5%] text-5xl opacity-50 animate-float-delayed">📋</div>
+            <div class="absolute bottom-[30%] left-[5%] text-6xl opacity-50 animate-float-slow">🤝</div>
+            <div class="absolute top-[10%] right-[40%] text-4xl opacity-50 animate-float">✅</div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image Section -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-[260px] aspect-square mx-auto rounded-[20px] bg-white border border-slate-200 p-[10px] shadow-2xl shadow-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:border-safety-500 hover:shadow-safety-500/30 group">
+                        <img src="images/profile.jpg" 
+                             onerror="this.src='https://ui-avatars.com/api/?name=Haris+Ahmad&background=15803d&color=fff&size=512&bold=true'" 
+                             alt="Haris Ahmad" 
+                             class="w-full h-full object-cover rounded-[12px] brightness-95 group-hover:brightness-105 transition-all duration-300">
+                        
+                        <!-- Certified Badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3 z-20 hover:scale-105 transition-transform">
+                            <div class="bg-safety-100 p-2 rounded-full text-safety-700">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-xs text-slate-500 font-bold uppercase">Certified</p>
+                                <p class="text-sm font-bold text-slate-900 whitespace-nowrap">NEBOSH IGC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Section -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Building a Safer Tomorrow</h2>
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            I am a motivated <strong class="text-safety-700">Health & Safety professional</strong> with international certifications in occupational safety, risk management, and workplace compliance.
+                        </p>
+                        <p>
+                            My goal is to create safer working environments by identifying hazards, assessing risks, and implementing effective safety procedures. I believe that safety is not just a policy, but a culture that needs to be nurtured.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="border-l-4 border-safety-500 pl-4">
+                            <h4 class="font-bold text-slate-900">Risk Assessment</h4>
+                            <p class="text-sm text-slate-500">Proactive hazard identification</p>
+                        </div>
+                        <div class="border-l-4 border-safety-500 pl-4">
+                            <h4 class="font-bold text-slate-900">Compliance</h4>
+                            <p class="text-sm text-slate-500">OSHA & International Standards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="py-24 bg-slate-50 relative overflow-hidden">
+
+        <!-- Floating Icons: Tools & Hazards -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[5%] left-[10%] text-6xl opacity-50 animate-float">🔧</div>
+            <div class="absolute top-[50%] right-[2%] text-7xl opacity-50 animate-float-delayed">☣️</div>
+            <div class="absolute bottom-[10%] left-[40%] text-5xl opacity-50 animate-float-slow">📏</div>
+            <div class="absolute top-[20%] left-[80%] text-6xl opacity-50 animate-float">🔨</div>
+            <div class="absolute bottom-[20%] left-[5%] text-5xl opacity-50 animate-float-delayed">📢</div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Core Competencies</h2>
+                <div class="h-1 w-20 bg-safety-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Skill Item -->
+                <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-center border border-slate-100">
+                    <div class="w-12 h-12 mx-auto bg-safety-50 rounded-full flex items-center justify-center text-safety-600 mb-4 group-hover:bg-safety-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 text-sm">Safety Management</h3>
+                </div>
+                
+                
+                <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-center border border-slate-100">
+                    <div class="w-12 h-12 mx-auto bg-safety-50 rounded-full flex items-center justify-center text-safety-600 mb-4 group-hover:bg-safety-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 text-sm">Hazard Identification</h3>
+                </div>
+
+                <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-center border border-slate-100">
+                    <div class="w-12 h-12 mx-auto bg-safety-50 rounded-full flex items-center justify-center text-safety-600 mb-4 group-hover:bg-safety-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-clipboard-check text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 text-sm">Risk Assessment</h3>
+                </div>
+
+                <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-center border border-slate-100">
+                    <div class="w-12 h-12 mx-auto bg-safety-50 rounded-full flex items-center justify-center text-safety-600 mb-4 group-hover:bg-safety-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 text-sm">Teamwork</h3>
+                </div>
+
+                <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-center border border-slate-100">
+                    <div class="w-12 h-12 mx-auto bg-safety-50 rounded-full flex items-center justify-center text-safety-600 mb-4 group-hover:bg-safety-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 text-sm">Communication</h3>
+                </div>
+
+                <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-center border border-slate-100">
+                    <div class="w-12 h-12 mx-auto bg-safety-50 rounded-full flex items-center justify-center text-safety-600 mb-4 group-hover:bg-safety-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-file-word text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 text-sm">Reporting</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="py-24 bg-white relative overflow-hidden border-t border-slate-50">
+
+        <!-- Floating Icons: Academics -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[10%] left-[5%] text-6xl opacity-50 animate-float">🎓</div>
+            <div class="absolute bottom-[20%] right-[10%] text-7xl opacity-50 animate-float-delayed">📚</div>
+            <div class="absolute top-[40%] right-[5%] text-5xl opacity-50 animate-float-slow">🏫</div>
+            <div class="absolute bottom-[10%] left-[30%] text-6xl opacity-50 animate-float">🎒</div>
+            <div class="absolute top-[10%] right-[40%] text-4xl opacity-50 animate-float-delayed">✏️</div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Academic Qualification</h2>
+                <p class="text-slate-500">Academic background and achievements</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Education Card 1 -->
+                <a href="education/matric.pdf" target="_blank" class="flex flex-row bg-slate-50 rounded-2xl shadow-sm border border-slate-100 hover:border-safety-200 hover:-translate-y-1 hover:shadow-md transition-all group relative overflow-hidden h-full">
+                    <div class="w-32 sm:w-40 shrink-0 bg-white relative border-r border-slate-100">
+                         <img src="education/matric.png" 
+                              onerror="this.src='https://ui-avatars.com/api/?name=Matric&background=f0fdf4&color=15803d&size=512&font-size=0.33'" 
+                              alt="Matric Certificate" 
+                              class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-center relative">
+                        <div class="absolute top-4 right-4 text-slate-300 group-hover:text-safety-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                             <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-safety-700 transition-colors">Matriculation</h3>
+                        </div>
+                        <p class="text-safety-700 font-semibold mb-2">FBISE Islamabad</p>
+                        <div class="flex items-center gap-2 mb-2">
+                             <span class="inline-block bg-safety-100 text-safety-800 text-xs font-bold px-2 py-1 rounded-full">94% Marks</span>
+                        </div>
+                        <p class="text-slate-600 text-sm line-clamp-2">Secondary School Certificate</p>
+                    </div>
+                </a>
+
+                <!-- Education Card 2 -->
+                <a href="education/fsc.pdf" target="_blank" class="flex flex-row bg-slate-50 rounded-2xl shadow-sm border border-slate-100 hover:border-safety-200 hover:-translate-y-1 hover:shadow-md transition-all group relative overflow-hidden h-full">
+                    <div class="w-32 sm:w-40 shrink-0 bg-white relative border-r border-slate-100">
+                         <img src="education/fsc.png" 
+                              onerror="this.src='https://ui-avatars.com/api/?name=FSc&background=f0fdf4&color=15803d&size=512&font-size=0.33'" 
+                              alt="FSc Certificate" 
+                              class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-center relative">
+                        <div class="absolute top-4 right-4 text-slate-300 group-hover:text-safety-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                             <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-safety-700 transition-colors">Intermediate (FSc Pre-Medical)</h3>
+                        </div>
+                        <p class="text-safety-700 font-semibold mb-2">BISE Bannu</p>
+                        <div class="flex items-center gap-2 mb-2">
+                             <span class="inline-block bg-safety-100 text-safety-800 text-xs font-bold px-2 py-1 rounded-full">86% Marks</span>
+                        </div>
+                        <p class="text-slate-600 text-sm line-clamp-2">Higher Secondary School Certificate</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section id="certifications" class="py-24 bg-white relative overflow-hidden">
+
+        <!-- Floating Icons: Awards & Certs -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[10%] left-[5%] text-6xl opacity-50 animate-float">🎖️</div>
+            <div class="absolute bottom-[20%] right-[10%] text-7xl opacity-50 animate-float-delayed">📜</div>
+            <div class="absolute top-[40%] right-[5%] text-5xl opacity-50 animate-float-slow">🏆</div>
+            <div class="absolute bottom-[10%] left-[40%] text-6xl opacity-50 animate-float">✅</div>
+            <div class="absolute top-[5%] right-[30%] text-4xl opacity-50 animate-float-delayed">🎗️</div>
+        </div>
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-slate-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Certifications</h2>
+                <p class="text-slate-500">Click on a certificate to view details</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Cert Card 1 -->
+                <a href="certificates/nebosh-igc.pdf" target="_blank" class="flex flex-row bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-safety-200 hover:-translate-y-1 transition-all group relative overflow-hidden h-full">
+                    <div class="w-32 sm:w-40 shrink-0 bg-slate-100 relative">
+                         <img src="certificates/nebosh-igc.png" 
+                              onerror="this.src='https://ui-avatars.com/api/?name=NEBOSH&background=dcfce7&color=15803d&size=512&font-size=0.33'" 
+                              alt="NEBOSH Certificate" 
+                              class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-center relative">
+                        <div class="absolute top-4 right-4 text-slate-300 group-hover:text-safety-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-safety-700 transition-colors">NEBOSH IGC</h3>
+                        </div>
+                        <p class="text-sm font-mono text-slate-500 mb-2">UK • Oct 2025</p>
+                        <p class="text-slate-600 text-sm line-clamp-2">International General Certificate in Occupational Health and Safety.</p>
+                    </div>
+                </a>
+
+                <!-- Cert Card 2 -->
+                <a href="certificates/iosh.pdf" target="_blank" class="flex flex-row bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-safety-200 hover:-translate-y-1 transition-all group relative overflow-hidden h-full">
+                    <div class="w-32 sm:w-40 shrink-0 bg-slate-100 relative">
+                         <img src="certificates/iosh.png" 
+                              onerror="this.src='https://ui-avatars.com/api/?name=IOSH&background=dcfce7&color=15803d&size=512&font-size=0.33'" 
+                              alt="IOSH Certificate" 
+                              class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-center relative">
+                        <div class="absolute top-4 right-4 text-slate-300 group-hover:text-safety-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-safety-700 transition-colors">IOSH Managing Safely</h3>
+                        </div>
+                        <p class="text-sm font-mono text-slate-500 mb-2">UK • Aug 2025</p>
+                        <p class="text-slate-600 text-sm line-clamp-2">IOSH Managing Safely.</p>
+                    </div>
+                </a>
+
+                <!-- Cert Card 3 -->
+                <a href="certificates/osha-30.pdf" target="_blank" class="flex flex-row bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-safety-200 hover:-translate-y-1 transition-all group relative overflow-hidden h-full">
+                    <div class="w-32 sm:w-40 shrink-0 bg-slate-100 relative">
+                         <img src="certificates/osha-30.png" 
+                              onerror="this.src='https://ui-avatars.com/api/?name=OSHA&background=dcfce7&color=15803d&size=512&font-size=0.33'" 
+                              alt="OSHA Certificate" 
+                              class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-center relative">
+                        <div class="absolute top-4 right-4 text-slate-300 group-hover:text-safety-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-safety-700 transition-colors">OSHA 30-Hour</h3>
+                        </div>
+                        <p class="text-sm font-mono text-slate-500 mb-2">USA • May 2025</p>
+                        <p class="text-slate-600 text-sm line-clamp-2">General Industry Safety and Health.</p>
+                    </div>
+                </a>
+
+                <!-- Cert Card 4 -->
+                <a href="certificates/nebosh-conf.pdf" target="_blank" class="flex flex-row bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-safety-200 hover:-translate-y-1 transition-all group relative overflow-hidden h-full">
+                    <div class="w-32 sm:w-40 shrink-0 bg-slate-100 relative">
+                         <img src="certificates/nebosh-conf.png" 
+                              onerror="this.src='https://ui-avatars.com/api/?name=Conference&background=dcfce7&color=15803d&size=512&font-size=0.33'" 
+                              alt="Conference Certificate" 
+                              class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-center relative">
+                        <div class="absolute top-4 right-4 text-slate-300 group-hover:text-safety-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-safety-700 transition-colors">Attendent NEBOSH Online Conference 2025</h3>
+                        </div>
+                        <p class="text-sm font-mono text-slate-500 mb-2">UK • Nov 2025</p>
+                        <p class="text-slate-600 text-sm line-clamp-2">Certificate of Attendance: Culture of Care, Health, Wellbeing and Resilience.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+
+        <!-- Floating Icons: Industry & Work (Lower Opacity for Dark Mode) -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[10%] left-[5%] text-6xl opacity-25 animate-float">🏗️</div>
+            <div class="absolute bottom-[20%] right-[5%] text-7xl opacity-25 animate-float-delayed">🏭</div>
+            <div class="absolute top-[50%] left-[40%] text-5xl opacity-25 animate-float-slow">💼</div>
+            <div class="absolute top-[20%] right-[15%] text-6xl opacity-25 animate-float">👷‍♂️</div>
+            <div class="absolute bottom-[10%] left-[15%] text-6xl opacity-25 animate-float-delayed">📅</div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Professional Experience</h2>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="relative border-l border-slate-700 ml-3 md:ml-6 space-y-12">
+                    
+                    <!-- Item -->
+                    <div class="relative pl-8 md:pl-12">
+                        <!-- Timeline Dot -->
+                        <span class="absolute -left-[5px] top-0 h-3 w-3 rounded-full bg-safety-500 ring-4 ring-slate-900"></span>
+                        
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                            <h3 class="text-xl font-bold text-white">Event Management Intern</h3>
+                            <span class="font-mono text-sm text-safety-400">Sep 2025 - Nov 2025</span>
+                        </div>
+                        <p class="text-slate-400 font-medium mb-4">Positive Solutions - Wah Cantt</p>
+                        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                            <p class="text-slate-300 leading-relaxed">
+                                Assisted in organizing safety awareness programs, event coordination, documentation, and stakeholder engagement. Ensured all event protocols met standard safety compliance measures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for future experience -->
+                    <div class="relative pl-8 md:pl-12 opacity-50">
+                        <span class="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-slate-600"></span>
+                        <p class="text-slate-500 italic">Previous academic projects...</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-24 bg-slate-50 relative overflow-hidden">
+
+        <!-- Floating Icons: Communication -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+            <div class="absolute top-[10%] left-[5%] text-6xl opacity-50 animate-float">📧</div>
+            <div class="absolute bottom-[15%] right-[10%] text-7xl opacity-50 animate-float-delayed">📱</div>
+            <div class="absolute top-[40%] right-[5%] text-5xl opacity-50 animate-float-slow">💬</div>
+            <div class="absolute bottom-[20%] left-[40%] text-6xl opacity-50 animate-float">🌐</div>
+            <div class="absolute top-[15%] left-[60%] text-4xl opacity-50 animate-float-delayed">📮</div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+                <div class="h-1 w-20 bg-safety-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto items-start">
+                <!-- Contact Info -->
+                <div class="md:w-1/2 space-y-8">
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        I'm currently looking for internships and open-source collaborations. If you have a question or just want to say hi, my inbox is always open!
+                    </p>
+                    
+                    <div class="py-4">
+                        <p class="text-xl font-semibold text-slate-900 flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-safety-100 flex items-center justify-center text-safety-600">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="text-base md:text-xl">harisdawar327@gmail.com</span>
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4 pt-2">
+                        <!-- Email/Gmail -->
+                        <a href="mailto:harisdawar327@gmail.com" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-safety-600 text-xl hover:bg-safety-600 hover:text-white transition-all shadow-sm">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1Fx7dRHvPP/" target="_blank" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-safety-600 text-xl hover:bg-safety-600 hover:text-white transition-all shadow-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/haris-ahmad-2a9971361" target="_blank" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-safety-600 text-xl hover:bg-safety-600 hover:text-white transition-all shadow-sm">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:w-1/2 w-full">
+                    <form class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 space-y-6" onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-safety-500 focus:ring-2 focus:ring-safety-200 outline-none transition-all" required>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-safety-500 focus:ring-2 focus:ring-safety-200 outline-none transition-all" required>
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-safety-500 focus:ring-2 focus:ring-safety-200 outline-none transition-all resize-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-safety-700 text-white font-bold py-3 rounded-lg hover:bg-safety-800 transition-transform hover:-translate-y-1 shadow-md shadow-safety-200">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-white border-t border-slate-100 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-slate-500 text-sm">
+                © 2025 Haris Ahmad. Built with a focus on safety.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        // Typing Effect
+        const typingText = document.getElementById('typing-text');
+        const phrases = ['Health and Safety Professional'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Deleting speed
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; // Typing speed
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before new word
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start typing on load
+        document.addEventListener('DOMContentLoaded', type);
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
