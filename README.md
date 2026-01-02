@@ -23,4 +23,4 @@ The website is deployed using Netlify for demonstration purposes.
 This repository is hosted on my GitHub account for deployment/testing purposes.  
 All credit for the design and code goes to **Haris Ahmad**.  
 
-This repository is **separate from my personal portfolio**, which can be found [here](https://hanifa-khanam.github.io/Portfolio/).
+This repository is **separate from my personal portfolio**, which can be found [here](https://hanifa-khanam.github.io/).
